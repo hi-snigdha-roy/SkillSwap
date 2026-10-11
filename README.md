@@ -17,7 +17,7 @@ New users start with 2 credits.
 You need Python 3.10 or newer and a MongoDB Atlas connection string.
 
 ```bash
-git clone https://github.com/snigdha19-here/SkillSwap.git
+git clone https://github.com/hi-snigdha-roy/SkillSwap.git
 cd SkillSwap
 python -m venv venv
 venv\Scripts\activate

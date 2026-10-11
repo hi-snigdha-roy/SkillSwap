@@ -6,7 +6,7 @@ free 20–30 minute session.
 **The credit rule:** teach one concept = earn 1 credit. Learning costs 1 credit.
 New users start with 2 credits.
 
-- **Repo:** https://github.com/snigdha19-here/SkillSwap
+- **Repo:** https://github.com/hi-snigdha-roy/SkillSwap
 - **Stack:** Flask (Python) + MongoDB Atlas, with plain HTML / CSS / JavaScript
 - **Branch we work on:** `main`
 

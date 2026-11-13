@@ -7,12 +7,12 @@
 
 import os                                  # lets us read settings from the computer
 from dotenv import load_dotenv             # reads our secret settings from the .env file
-from pymongo import MongoClient            # lets Python talk to MongoDB
-from flask import Flask, render_template, request, redirect, url_for, flash,session                                 
-from werkzeug.security import generate_password_hash, check_password_hash  # scrambles a password so we never store the real one
-from bson import ObjectId
+from flask import Flask, render_template, request, redirect, session, send_from_directory, url_for, flash
+from pymongo import MongoClient    # lets Python talk to MongoDB
+from bson import ObjectId  
 from functools import wraps
 from datetime import datetime              # to record when a request was made
+from werkzeug.security import generate_password_hash, check_password_hash   # scrambles a password so we never store the real ones
 
 # --- Load our secret settings from the .env file ---
 # .env holds MONGO_URI (the database address and password) and SECRET_KEY.
@@ -520,7 +520,11 @@ def inject_user():
         "available": u["available"],
     }}
 
-
+@app.route("/favicon.ico")
+@app.route("/favicon.svg")
+@app.route("/apple-touch-icon.png")
+def favicon_files():
+    return send_from_directory("public", request.path.lstrip("/"))
 
 # ---------------------------------------------------------------
 # This starts the website when we run:  python app.py
